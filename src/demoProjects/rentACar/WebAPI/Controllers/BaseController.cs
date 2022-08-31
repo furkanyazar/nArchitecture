@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebAPI.Controllers
+namespace RentACar.WebAPI.Controllers
 {
     public class BaseController : ControllerBase
     {

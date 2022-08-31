@@ -25,15 +25,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Security", "src\corePa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rentACar", "rentACar", "{7E45E86A-4669-4592-A0A8-B7868C172C1D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "src\demoProjects\rentACar\WebAPI\WebAPI.csproj", "{D2B0B028-3D28-471F-854E-B1B828612C05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.WebAPI", "src\demoProjects\rentACar\WebAPI\RentACar.WebAPI.csproj", "{D2B0B028-3D28-471F-854E-B1B828612C05}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\demoProjects\rentACar\Application\Application.csproj", "{E9317B5A-A185-4D5F-A986-E9AAEA9433C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Application", "src\demoProjects\rentACar\Application\RentACar.Application.csproj", "{E9317B5A-A185-4D5F-A986-E9AAEA9433C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\demoProjects\rentACar\Domain\Domain.csproj", "{893B7F0F-0531-4B07-AB9A-750D86B88269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Domain", "src\demoProjects\rentACar\Domain\RentACar.Domain.csproj", "{893B7F0F-0531-4B07-AB9A-750D86B88269}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\demoProjects\rentACar\Infrastructure\Infrastructure.csproj", "{ACD42D70-C2E0-44E5-9629-D1A317AF0692}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Infrastructure", "src\demoProjects\rentACar\Infrastructure\RentACar.Infrastructure.csproj", "{ACD42D70-C2E0-44E5-9629-D1A317AF0692}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "src\demoProjects\rentACar\Persistence\Persistence.csproj", "{C276C6AC-DAB8-4016-B776-319B13E7DAD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Persistence", "src\demoProjects\rentACar\Persistence\RentACar.Persistence.csproj", "{C276C6AC-DAB8-4016-B776-319B13E7DAD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

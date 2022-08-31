@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Persistence.Contexts;
+using RentACar.Persistence.Contexts;
 
 #nullable disable
 
-namespace Persistence.Migrations
+namespace RentACar.Persistence.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
     [Migration("20220816210400_Init")]

@@ -1,7 +1,7 @@
-﻿using Application.Features.Brands.Dtos;
-using Core.Persistence.Paging;
+﻿using Core.Persistence.Paging;
+using RentACar.Application.Features.Brands.Dtos;
 
-namespace Application.Features.Brands.Models
+namespace RentACar.Application.Features.Brands.Models
 {
     public class BrandListModel : BasePageableModel
     {

@@ -1,12 +1,12 @@
-﻿using Application.Features.Brands.Models;
-using Application.Services.Repositories;
-using AutoMapper;
+﻿using AutoMapper;
 using Core.Application.Requests;
 using Core.Persistence.Paging;
-using Domain.Entities;
 using MediatR;
+using RentACar.Application.Features.Brands.Models;
+using RentACar.Application.Services.Repositories;
+using RentACar.Domain.Entities;
 
-namespace Application.Features.Brands.Queries.GetListBrand
+namespace RentACar.Application.Features.Brands.Queries.GetListBrand
 {
     public class GetListBrandQuery : IRequest<BrandListModel>
     {

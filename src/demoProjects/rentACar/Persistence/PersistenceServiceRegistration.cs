@@ -1,11 +1,11 @@
-﻿using Application.Services.Repositories;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Persistence.Contexts;
-using Persistence.Repositories;
+using RentACar.Application.Services.Repositories;
+using RentACar.Persistence.Contexts;
+using RentACar.Persistence.Repositories;
 
-namespace Persistence
+namespace RentACar.Persistence
 {
     public static class PersistenceServiceRegistration
     {

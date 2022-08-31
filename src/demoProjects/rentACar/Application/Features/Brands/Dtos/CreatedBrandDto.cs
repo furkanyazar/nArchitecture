@@ -1,4 +1,4 @@
-﻿namespace Application.Features.Brands.Dtos
+﻿namespace RentACar.Application.Features.Brands.Dtos
 {
     public class CreatedBrandDto
     {

@@ -1,10 +1,10 @@
-﻿using Application.Features.Brands.Constants;
-using Application.Services.Repositories;
-using Core.CrossCuttingConcerns.Exceptions;
+﻿using Core.CrossCuttingConcerns.Exceptions;
 using Core.Persistence.Paging;
-using Domain.Entities;
+using RentACar.Application.Features.Brands.Constants;
+using RentACar.Application.Services.Repositories;
+using RentACar.Domain.Entities;
 
-namespace Application.Features.Brands.Rules
+namespace RentACar.Application.Features.Brands.Rules
 {
     public class BrandBusinessRules
     {

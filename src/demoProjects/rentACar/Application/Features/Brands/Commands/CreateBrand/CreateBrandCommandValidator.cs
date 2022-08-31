@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Application.Features.Brands.Commands.CreateBrand
+namespace RentACar.Application.Features.Brands.Commands.CreateBrand
 {
     public class CreateBrandCommandValidator : AbstractValidator<CreateBrandCommand>
     {

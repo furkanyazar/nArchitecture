@@ -1,6 +1,6 @@
 ﻿using Core.Persistence.Repositories;
 
-namespace Domain.Entities
+namespace RentACar.Domain.Entities
 {
     public class Brand : Entity
     {

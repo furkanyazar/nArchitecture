@@ -1,12 +1,12 @@
-﻿using Application.Features.Brands.Commands.CreateBrand;
-using Application.Features.Brands.Dtos;
-using Application.Features.Brands.Models;
-using Application.Features.Brands.Queries.GetByIdBrand;
-using Application.Features.Brands.Queries.GetListBrand;
-using Core.Application.Requests;
+﻿using Core.Application.Requests;
 using Microsoft.AspNetCore.Mvc;
+using RentACar.Application.Features.Brands.Commands.CreateBrand;
+using RentACar.Application.Features.Brands.Dtos;
+using RentACar.Application.Features.Brands.Models;
+using RentACar.Application.Features.Brands.Queries.GetByIdBrand;
+using RentACar.Application.Features.Brands.Queries.GetListBrand;
 
-namespace WebAPI.Controllers
+namespace RentACar.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

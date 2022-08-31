@@ -1,4 +1,4 @@
-﻿namespace Application.Features.Brands.Constants
+﻿namespace RentACar.Application.Features.Brands.Constants
 {
     public class Messages
     {

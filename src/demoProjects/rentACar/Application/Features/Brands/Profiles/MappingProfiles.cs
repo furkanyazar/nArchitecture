@@ -1,11 +1,11 @@
-﻿using Application.Features.Brands.Commands.CreateBrand;
-using Application.Features.Brands.Dtos;
-using Application.Features.Brands.Models;
-using AutoMapper;
+﻿using AutoMapper;
 using Core.Persistence.Paging;
-using Domain.Entities;
+using RentACar.Application.Features.Brands.Commands.CreateBrand;
+using RentACar.Application.Features.Brands.Dtos;
+using RentACar.Application.Features.Brands.Models;
+using RentACar.Domain.Entities;
 
-namespace Application.Features.Brands.Profiles
+namespace RentACar.Application.Features.Brands.Profiles
 {
     public class MappingProfiles : Profile
     {
