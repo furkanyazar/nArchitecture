@@ -22,7 +22,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Persistence\RentACar.Persistence.csproj" />
+		<ProjectReference Include="..\RentACar.Persistence\RentACar.Persistence.csproj" />
 	</ItemGroup>
 
 </Project>
