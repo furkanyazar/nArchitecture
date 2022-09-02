@@ -7,12 +7,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Enums\**" />
-	  <EmbeddedResource Remove="Enums\**" />
-	  <None Remove="Enums\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\..\..\corePackages\Core.Persistence\Core.Persistence.csproj" />
 	</ItemGroup>
 
