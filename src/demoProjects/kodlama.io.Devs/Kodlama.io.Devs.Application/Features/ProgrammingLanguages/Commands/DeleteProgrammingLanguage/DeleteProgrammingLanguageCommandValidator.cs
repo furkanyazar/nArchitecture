@@ -6,8 +6,8 @@ namespace Kodlama.io.Devs.Application.Features.ProgrammingLanguages.Commands.Del
     {
         public DeleteProgrammingLanguageCommandValidator()
         {
-            RuleFor(p => p.Id).NotEmpty();
-            RuleFor(p => p.Id).GreaterThan(0);
+            RuleFor(c => c.Id).NotEmpty();
+            RuleFor(c => c.Id).GreaterThan(0);
         }
     }
 }

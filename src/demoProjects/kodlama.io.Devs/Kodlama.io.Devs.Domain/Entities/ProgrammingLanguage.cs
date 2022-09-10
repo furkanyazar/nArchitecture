@@ -6,9 +6,9 @@ namespace Kodlama.io.Devs.Domain.Entities
     {
         public string Name { get; set; }
 
-        public ProgrammingLanguage()
-        {
-        }
+        public virtual ICollection<Technology> Technologies { get; set; }
+
+        public ProgrammingLanguage() { }
 
         public ProgrammingLanguage(int id, string name) : this()
         {

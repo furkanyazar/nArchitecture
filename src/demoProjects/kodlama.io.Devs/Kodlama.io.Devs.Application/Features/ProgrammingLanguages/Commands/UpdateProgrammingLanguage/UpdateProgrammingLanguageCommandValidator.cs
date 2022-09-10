@@ -6,9 +6,9 @@ namespace Kodlama.io.Devs.Application.Features.ProgrammingLanguages.Commands.Upd
     {
         public UpdateProgrammingLanguageCommandValidator()
         {
-            RuleFor(p => p.Id).NotEmpty();
-            RuleFor(p => p.Id).GreaterThan(0);
-            RuleFor(p => p.Name).NotEmpty();
+            RuleFor(c => c.Id).NotEmpty();
+            RuleFor(c => c.Id).GreaterThan(0);
+            RuleFor(c => c.Name).NotEmpty();
         }
     }
 }
