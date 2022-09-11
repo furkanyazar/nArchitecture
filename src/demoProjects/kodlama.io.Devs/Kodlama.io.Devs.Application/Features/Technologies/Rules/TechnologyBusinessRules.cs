@@ -1,6 +1,5 @@
 using Core.CrossCuttingConcerns.Exceptions;
 using Core.Persistence.Paging;
-using Kodlama.io.Devs.Application.Features.Technologies.Commands.UpdateTechnology;
 using Kodlama.io.Devs.Application.Features.Technologies.Constants;
 using Kodlama.io.Devs.Application.Services.Repositories;
 using Kodlama.io.Devs.Domain.Entities;
@@ -23,11 +22,9 @@ namespace Kodlama.io.Devs.Application.Features.Technologies.Rules
                 throw new BusinessException(Messages.TechnologyNameExists);
         }
 
-        public async Task TechnologyNameCanNotBeDuplicatedWhenUpdated(UpdateTechnologyCommand updateTechnologyCommand)
+        public async Task TechnologyNameCanNotBeDuplicatedWhenUpdated(int id, string name)
         {
-            IPaginate<Technology> result = await _technologyRepository.GetListAsync(
-                p => p.Id != updateTechnologyCommand.Id && p.Name == updateTechnologyCommand.Name
-            );
+            IPaginate<Technology> result = await _technologyRepository.GetListAsync(p => p.Id != id && p.Name == name);
             if (result.Items.Any())
                 throw new BusinessException(Messages.TechnologyNameExists);
         }

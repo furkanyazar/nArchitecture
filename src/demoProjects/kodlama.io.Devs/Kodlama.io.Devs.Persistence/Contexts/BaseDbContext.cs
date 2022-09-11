@@ -1,6 +1,8 @@
 ﻿using Core.Security.Entities;
+using Core.Security.Enums;
 using Core.Security.Hashing;
 using Kodlama.io.Devs.Domain.Entities;
+using Kodlama.io.Devs.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -11,6 +13,7 @@ namespace Kodlama.io.Devs.Persistence.Contexts
         protected IConfiguration Configuration { get; set; }
         public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
         public DbSet<Technology> Technologies { get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
 
         public DbSet<User> Users { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
@@ -96,6 +99,16 @@ namespace Kodlama.io.Devs.Persistence.Contexts
                 a.HasOne(p => p.User);
             });
 
+            modelBuilder.Entity<SocialMedia>(a =>
+            {
+                a.ToTable("SocialMedias").HasKey(k => k.Id);
+                a.Property(p => p.Id).HasColumnName("Id");
+                a.Property(p => p.UserId).HasColumnName("UserId");
+                a.Property(p => p.Url).HasColumnName("Url");
+                a.Property(p => p.SocialMediaType).HasColumnName("SocialMediaType");
+                a.HasOne(p => p.User);
+            });
+
             ProgrammingLanguage[] programmingLanguageEntitySeeds = { new(1, "C#"), new(2, "Java"), new(3, "Python") };
             modelBuilder.Entity<ProgrammingLanguage>().HasData(programmingLanguageEntitySeeds);
 
@@ -112,7 +125,10 @@ namespace Kodlama.io.Devs.Persistence.Contexts
 
             HashingHelper.CreatePasswordHash("Test123.", out byte[] passwordHash, out byte[] passwordSalt);
 
-            User[] userEntitySeeds = { new(1, "Furkan", "Yazar", "furkan@tatilcikus.com", passwordSalt, passwordHash, true, 0), };
+            User[] userEntitySeeds =
+            {
+                new(1, "Furkan", "Yazar", "furkan@tatilcikus.com", passwordSalt, passwordHash, true, AuthenticatorType.None),
+            };
             modelBuilder.Entity<User>().HasData(userEntitySeeds);
 
             OperationClaim[] operationClaimEntitySeeds = { new(1, "Admin"), new(2, "User") };
@@ -120,6 +136,9 @@ namespace Kodlama.io.Devs.Persistence.Contexts
 
             UserOperationClaim[] userOperationClaimEntitySeeds = { new(1, 1, 1) };
             modelBuilder.Entity<UserOperationClaim>().HasData(userOperationClaimEntitySeeds);
+
+            SocialMedia[] socialMediaEntitySeeds = { new(1, 1, "https://github.com/furkanyazar", SocialMediaType.GitHub) };
+            modelBuilder.Entity<SocialMedia>().HasData(socialMediaEntitySeeds);
         }
     }
 }
