@@ -35,7 +35,10 @@ namespace Kodlama.io.Devs.Application.Features.ProgrammingLanguages.Commands.Upd
                 CancellationToken cancellationToken
             )
             {
-                ProgrammingLanguage? programmingLanguage = await _programmingLanguageRepository.GetAsync(p => p.Id == request.Id);
+                ProgrammingLanguage? programmingLanguage = await _programmingLanguageRepository.GetAsync(
+                    p => p.Id == request.Id,
+                    enableTracking: false
+                );
 
                 _programmingLanguageBusinessRules.ProgrammingLanguageShouldExistWhenRequested(programmingLanguage);
                 await _programmingLanguageBusinessRules.ProgrammingLanguageNameCanNotBeDuplicatedWhenUpdated(request);

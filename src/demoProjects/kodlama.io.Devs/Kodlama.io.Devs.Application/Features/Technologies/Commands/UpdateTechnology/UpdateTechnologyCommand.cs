@@ -32,7 +32,7 @@ namespace Kodlama.io.Devs.Application.Features.Technologies.Commands.UpdateTechn
 
             public async Task<UpdatedTechnologyDto> Handle(UpdateTechnologyCommand request, CancellationToken cancellationToken)
             {
-                Technology? technology = await _technologyRepository.GetAsync(t => t.Id == request.Id);
+                Technology? technology = await _technologyRepository.GetAsync(t => t.Id == request.Id, enableTracking: false);
 
                 _technologyBusinessRules.TechnologyShouldExistWhenRequested(technology);
                 await _technologyBusinessRules.TechnologyNameCanNotBeDuplicatedWhenUpdated(request);
