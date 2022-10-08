@@ -3,7 +3,7 @@ using Kodlama.io.Devs.Application.Features.UserOperationClaims.Commands.CreateUs
 using Kodlama.io.Devs.Application.Features.UserOperationClaims.Commands.DeleteUserOperationClaim;
 using Kodlama.io.Devs.Application.Features.UserOperationClaims.Dtos;
 using Kodlama.io.Devs.Application.Features.UserOperationClaims.Models;
-using Kodlama.io.Devs.Application.Features.UserOperationClaims.Queries.GetListUserOperationClaim;
+using Kodlama.io.Devs.Application.Features.UserOperationClaims.Queries.GetListByUserIdUserOperationClaim;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kodlama.io.Devs.WebAPI.Controllers;
@@ -29,7 +29,7 @@ public class UserUserOperationClaimsController : BaseController
     [HttpGet]
     public async Task<IActionResult> GetList([FromQuery] PageRequest pageRequest, [FromQuery] int userId)
     {
-        GetListUserOperationClaimQuery getListUserOperationClaimQuery = new()
+        GetListByUserIdUserOperationClaimQuery getListUserOperationClaimQuery = new()
         {
             PageRequest = pageRequest,
             UserId = userId

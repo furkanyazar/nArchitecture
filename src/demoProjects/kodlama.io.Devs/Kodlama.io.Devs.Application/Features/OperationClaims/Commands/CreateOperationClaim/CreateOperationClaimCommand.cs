@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Core.Application.Pipelines.Authorization;
 using Core.Security.Entities;
 using Kodlama.io.Devs.Application.Features.OperationClaims.Dtos;
 using Kodlama.io.Devs.Application.Features.OperationClaims.Rules;
@@ -7,8 +8,9 @@ using MediatR;
 
 namespace Kodlama.io.Devs.Application.Features.OperationClaims.Commands.CreateOperationClaim;
 
-public class CreateOperationClaimCommand : IRequest<CreatedOperationClaimDto>
+public class CreateOperationClaimCommand : IRequest<CreatedOperationClaimDto>, ISecuredRequest
 {
+    public string[] Roles => new[] { "Admin" };
     public string Name { get; set; }
 
     public class CreateOperationClaimCommandHandler : IRequestHandler<CreateOperationClaimCommand, CreatedOperationClaimDto>
