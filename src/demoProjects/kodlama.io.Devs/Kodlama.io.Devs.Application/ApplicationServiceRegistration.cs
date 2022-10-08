@@ -6,7 +6,10 @@ using Kodlama.io.Devs.Application.Features.OperationClaims.Rules;
 using Kodlama.io.Devs.Application.Features.ProgrammingLanguages.Rules;
 using Kodlama.io.Devs.Application.Features.SocialMedias.Rules;
 using Kodlama.io.Devs.Application.Features.Technologies.Rules;
+using Kodlama.io.Devs.Application.Features.UserOperationClaims.Rules;
 using Kodlama.io.Devs.Application.Services.AuthService;
+using Kodlama.io.Devs.Application.Services.OperationClaimService;
+using Kodlama.io.Devs.Application.Services.UserService;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -25,6 +28,7 @@ namespace Kodlama.io.Devs.Application
             services.AddScoped<AuthBusinessRules>();
             services.AddScoped<SocialMediaBusinessRules>();
             services.AddScoped<OperationClaimBusinessRules>();
+            services.AddScoped<UserOperationClaimBusinessRules>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));
@@ -34,6 +38,8 @@ namespace Kodlama.io.Devs.Application
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
 
             services.AddScoped<IAuthService, AuthManager>();
+            services.AddScoped<IUserService, UserManager>();
+            services.AddScoped<IOperationClaimService, OperationClaimManager>();
 
             return services;
         }
